@@ -40,8 +40,7 @@ Array, Greedy
 
 ### Solutions
 #### Approach 1: Dynamic Programming
-倒叙遍历数组，用 `flag` 数组标记可达性，0 表示不可达，1 表示可达，最后数组第一个元素的标记应为 1。
-
+倒叙遍历数组，用 `flag` 数组标记可达性，0 表示不可达，1 表示可达，最后数组第一个元素的标记应为 1。  
 时间复杂度: `O(n^2)`
 空间复杂度: `O(n)`
 
@@ -70,7 +69,10 @@ public:
 ```
 
 #### Approach 2: Dynamic Programming
-用 dp 数组表示还剩多少步可以走。状态转移方程为 `dp[i] = max(dp[i - 1], nums[i - 1]) - 1`
+用 `dp` 数组表示还剩多少步可以走。状态转移方程为 `dp[i] = max(dp[i - 1], nums[i - 1]) - 1`  
+时间复杂度: `O(n)`  
+空间复杂度: `O(1)`
+
 ```
 class Solution {
 public:
@@ -86,12 +88,12 @@ public:
         return true;
     }
 };
-```
-时间复杂度: `O(n)`
-空间复杂度: `O(n)`
+
 
 #### Approach 2: Greedy
-贪心策略为: 每次都选最远能够到达的步数
+贪心策略为: 每次都选最远能够到达的步数  
+时间复杂度: `O(n)`  
+空间复杂度: `O(1)`
 ```
 class Solution {
 public:
@@ -123,5 +125,3 @@ public:
     }
 };
 ```
-时间复杂度: `O(n)`
-空间复杂度: `O(1)`
