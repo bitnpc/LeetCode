@@ -72,7 +72,6 @@ public:
 用 `dp` 数组表示还剩多少步可以走。状态转移方程为 `dp[i] = max(dp[i - 1], nums[i - 1]) - 1`  
 时间复杂度: `O(n)`  
 空间复杂度: `O(1)`
-
 ```
 class Solution {
 public:
@@ -88,8 +87,7 @@ public:
         return true;
     }
 };
-
-
+```
 #### Approach 2: Greedy
 贪心策略为: 每次都选最远能够到达的步数  
 时间复杂度: `O(n)`  
